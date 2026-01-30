@@ -18,7 +18,7 @@ main {
   cursor: url("../assets/svgs/cursor.png"), auto;
 }
 
-header, footer, .project-section,
+header, footer, .project-section, #Contact,
 #hero-image{
   cursor: url("../assets/svgs/cursor-white.png"), auto;
 }
