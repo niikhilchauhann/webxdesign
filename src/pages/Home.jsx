@@ -36,15 +36,15 @@ export default function Home() {
   return (
     <>
 
-     <header class="header-main">
-      <div class="header-main-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="#About" class="active">About</a>
-        <a href="#Projects" class="active">Projects</a>
-        <div class="header-main-logo"><h2>PORTFOLIO</h2></div>
-        <a href="https://drive.google.com/file/d/1Wdxpp6Y5bJS1unP0ZFmhXiz4RpoaowW0/view?usp=sharing" target="_blank" class="active">Resume</a>
-        <a href="https://github.com/niikhilchauhann?tab=repositories" class="active">GitHub</a>
-        <a href="#Contact" class="active">Contact</a>
+     <header className="header-main">
+      <div className="header-main-nav">
+        <a href="index.html" className="active">Home</a>
+        <a href="#About" className="active">About</a>
+        <a href="#Projects" className="active">Projects</a>
+        <div className="header-main-logo"><h2>PORTFOLIO</h2></div>
+        <a href="https://drive.google.com/file/d/1Wdxpp6Y5bJS1unP0ZFmhXiz4RpoaowW0/view?usp=sharing" target="_blank" className="active">Resume</a>
+        <a href="https://github.com/niikhilchauhann?tab=repositories" className="active">GitHub</a>
+        <a href="#Contact" className="active">Contact</a>
       </div>
     </header>
 
