@@ -35,6 +35,7 @@ export default function Home() {
 
   return (
     <>
+
      <header class="header-main">
       <div class="header-main-nav">
         <a href="index.html" class="active">Home</a>
