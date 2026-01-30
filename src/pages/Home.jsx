@@ -653,9 +653,9 @@ export default function Home() {
             <div>
             <h4 className="text-[#ff8c3a] font-semibold mb-4 text-2xl">Contact</h4>
             <ul className="space-y-3 text-gray-300 text-xl">
-                <li>+91 7738443636</li>
-                <li>Jaycrea36@gmail.com</li>
-                <li>Portfolio-jcrea.com</li>
+                <li>+91 87550 60559</li>
+                <li>isedenlive@gmail.com</li>
+                <li>Portfolio</li>
             </ul>
             </div>
 
