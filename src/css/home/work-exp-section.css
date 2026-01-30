@@ -1,0 +1,121 @@
+.work-exp-section{
+    margin: 5rem 5rem;
+}
+
+.work-exp-section span{
+    color: var(--primary);
+}
+
+.work-exp-section .heading{
+    text-align: center;
+    letter-spacing: 0.1rem;
+}
+
+.work-history-timeline{
+    margin-top: 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.timeline-left-content .description{
+    font-size: 1.6rem;
+    margin-bottom: 3.2rem;
+}
+.timeline-right-content .description{
+    margin-bottom: 2.4rem;
+}
+
+.timeline-left-content {
+    max-width: 36%;
+}
+
+.timeline-right-content {
+    max-width: 36%;
+}
+
+.timeline-right-content .description{
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.timeline-center-content{
+    padding-top: 0.7rem;
+    height: 26.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    position: relative;
+}
+
+.timeline-circle{
+    z-index: 1;
+    background-color: var(--primary);
+    height: 3.2rem;
+    width: 3.2rem;
+    border-radius: 2rem;
+    background: url("../../assets/svgs/timeline-circle-odd.svg");
+
+}
+
+.timeline-circle:nth-child(odd){
+    background: url("../../assets/svgs/timeline-circle-odd.svg");
+}
+.timeline-circle:nth-child(even){
+    background: url("../../assets/svgs/timeline-circle-even.svg");
+}
+
+.timeline-circle:nth-child(odd), .timeline-circle:nth-child(even){
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.timeline-connector{
+    position: absolute;
+    top: 1rem;
+    z-index: 0;
+    background-color: var(--primary);
+    height: 24rem;
+    width: 1rem;
+    background: url("../../assets/svgs/timeline-connector.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 
+
+.timeline-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; 
+    margin-bottom: 3rem;  
+}
+
+.timeline-left-content,
+.timeline-right-content {
+    max-width: 36%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.timeline-center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    padding-top: 0.7rem;
+} */
+
+
+
+@media(max-width: 426px) {
+    .work-exp-section{
+        margin: 2rem 2rem;
+}
+}

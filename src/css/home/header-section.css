@@ -1,0 +1,75 @@
+.header-main {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  padding: 8px;
+  display: flex;
+  background-color: var(--surface);
+  height: 72px;
+  width: calc(100vw - 109px);
+  max-width: 1100px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px;
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(7.5px);
+}
+.header-main-nav {
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+}
+.header-main-nav a, .header-main-logo{
+  color: var(--white);
+  /* background-color: var(--primary); */
+  border-radius: 50px;
+  display: flex;
+  padding: 0px 32px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 0;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color ease-in-out 300ms;
+}
+
+.header-main-logo h2{
+  color: var(--white);
+}
+
+.header-main-nav div{
+  margin: 0px 24px;
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  line-height: 0;
+}
+
+.header-main-nav  a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body:has(#About:target) .header-main-nav a[href="#About"],
+body:has(#Service:target) .header-main-nav a[href="#Service"],
+body:has(#Project:target) .header-main-nav a[href="#Project"],
+body:has(#Contact:target) .header-main-nav a[href="#Contact"] {
+  background-color: var(--primary);
+  font-weight: 600;
+  color: var(--white);
+}
+.header-main-nav a[href="index.html"] {
+  background-color: var(--primary);
+  font-weight: 600;
+}
+body:has(:target) .header-main-nav a[href="index.html"] {
+  background-color: transparent;
+  font-weight: 500;
+}
+
+body:has(:target) .header-main-nav a[href="index.html"]:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+}

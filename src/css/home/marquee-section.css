@@ -1,0 +1,44 @@
+.custom-marquee {
+  background-color: var(--primary);
+  border-top-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  overflow: hidden;
+  padding: 1.5rem 0;
+}
+
+.marquee-tilted-container {
+  transform: rotate(-1.8deg); 
+  background-color: var(--white);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-track {
+  display: inline-flex;
+  animation: scroll 40s linear infinite;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.6rem;
+  color: var(--black);
+  white-space: nowrap;
+  padding: 1rem 0.4rem;
+}
+
+.item img {
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+} 

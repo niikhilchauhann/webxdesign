@@ -1,0 +1,173 @@
+.certifications-section{
+    margin: 5rem 5rem;
+}
+
+.certifications-headline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+
+}
+
+
+.certifications-headline span{
+    color: var(--primary);
+}
+
+.certifications-headline p:nth-child(1){
+    /* font-size: 4rem; */
+    line-height: 1.35;
+    max-width:40rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+.certifications-headline p:nth-child(2){
+    max-width:36rem;
+    line-height: 1.5;
+}
+
+.certifications-card-row {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  /* gap: 1rem; */
+  row-gap: 3rem;
+  column-gap: 2rem;
+  flex-wrap: wrap;
+  /* padding: 30px 0px; */
+  /* margin-bottom: 15px; */
+}
+
+.button {
+  width: fit-content;
+  border-radius: 5rem;
+  padding: 1.2rem 2.5rem;
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 700;
+  /* border: 1px solid var(--black); */
+}
+
+/* .projects-card-row::-webkit-scrollbar {
+  display: none; /* Chrome, Safari 
+} */
+
+.certifications-card{
+    flex: 0 0 auto; 
+    width: 28rem;
+    height: 20rem;
+    border-radius: 2.4rem;
+    /* background-color: #1D2939; */
+    stroke-width: 2px;
+    /* stroke: rgba(255, 255, 255, 0.00); */
+    backdrop-filter: blur(5px);
+    /* border: 1.5px solid var(--border-color); */
+    display: flex;
+    flex-direction: column; 
+    overflow: hidden;
+    transition: all ease-in-out 300ms;
+    cursor: pointer;
+}
+
+.certifications-card-stack {
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.certifications-card-stack .card{
+    height: 88%;
+    width: 100%;
+    position: absolute;
+    border-radius: 2rem;
+    transition: all ease-in-out 300ms;
+
+}
+
+.certifications-card-stack .card:nth-child(1){
+    width: 90%;
+    bottom: 2.4rem;
+    opacity: 0.5;
+    background-color: #c7c7c7;
+}
+
+.certifications-card-stack .card:nth-child(2){
+    width: 95%;
+    background-color: #c9c9c9;
+    bottom: 1.2rem;
+}
+
+.certifications-card-stack .card:nth-child(3){
+    background: var(--white) url("../../assets/certificates/intern.jpeg");
+    bottom: 0;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Certificates images mapped to each card */
+.certifications-card:nth-child(1) .card:nth-child(3) {
+  background: var(--white) url("../../assets/certificates/0.png") center/cover;
+}
+.certifications-card:nth-child(2) .card:nth-child(3) {
+  background: var(--white) url("../../assets/certificates/1.png") center/cover;
+}
+.certifications-card:nth-child(3) .card:nth-child(3) {
+  background: var(--white) url("../../assets/certificates/2.png") center/cover;
+}
+.certifications-card:nth-child(4) .card:nth-child(3) {
+  background: var(--white) url("../../assets/certificates/3.png") center/cover;
+}
+.certifications-card:nth-child(5) .card:nth-child(3) {
+  background: var(--white) url("../../assets/certificates/4.png") center/cover;
+}
+.certifications-card:nth-child(6) .card:nth-child(3) {
+  background: var(--white) url("../../assets/certificates/5.png") center/cover;
+}
+.certifications-card:nth-child(7) .card:nth-child(3) {
+  background: var(--white) url("../../assets/certificates/6.png") center/cover;
+}
+.certifications-card:nth-child(8) .card:nth-child(3) {
+  background: var(--white) url("../../assets/certificates/7.png") center/cover;
+}
+.certifications-card:nth-child(9) .card:nth-child(3) {
+  background: var(--white) url("../../assets/certificates/8.png") center/cover;
+}
+
+
+.certifications-card-btn{
+    position: absolute;
+    height: 3.6rem;
+    width: fit-content;
+    padding: 0 1.6rem;
+    border-radius: 50px;
+    bottom: 1.2rem;
+    left: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1D2939;
+    transition: all ease-in-out 300ms;
+}
+
+.certifications-card-btn p{
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+
+.certifications-card:hover{
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.15);
+}
+
+.certifications-card:hover .certifications-card-stack .card{
+    height: 100%;
+}
