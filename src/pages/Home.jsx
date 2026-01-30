@@ -23,6 +23,8 @@ import "../css/home/certifications-section.css";
 import "../css/home/hire-me-section.css";
 import "../css/home/contact-me-section.css";
 
+import ContactSection from '../components/ContactUsButtons/ContactSection'
+
 export default function Home() {
   useEffect(() => {
     import("../scripts/crazy-animations/animations.js");
@@ -563,36 +565,43 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="contact-me-section" id="Contact">
+    <ContactSection/>
+
+      {/* <section className="contact-me-section" id="Contact">
         <p className="heading">
           Have an Awesome Project Idea? <span>Let's Discuss</span>
         </p>
 
-        <div className="email-container">
-          <form action="https://api.web3forms.com/submit" method="POST" className="email-wrapper">
-            <div className="round-icon" />
+        <div className="contact-row">
 
-            <input type="hidden" name="access_key" value="abc88dda-ed87-4012-9b3c-114ea01d25d4" />
-            <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+          <div className="email-container">
+            <form action="https://api.web3forms.com/submit" method="POST" className="email-wrapper">
+              <div className="round-icon" />
 
-            <div className="text-field">
-              <input
-                type="email"
-                name="email"
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$"
-                placeholder="Enter email address"
-                required
-              />
-            </div>
+              <input type="hidden" name="access_key" value="abc88dda-ed87-4012-9b3c-114ea01d25d4" />
+              <input type="hidden" name="redirect" value="https://web3forms.com/success" />
 
-            <button type="submit" className="send-button">
-              <p>Send</p>
-            </button>
-          </form>
+              <div className="text-field">
+                <input
+                  type="email"
+                  name="email"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$"
+                  placeholder="Enter email address"
+                  required
+                />
+              </div>
+
+              <button type="submit" className="send-button">
+                <p>Send</p>
+              </button>
+            </form>
+          </div>
+        
+          <ContactUsButtons/>
         </div>
-
+        
         <div className="mail-banner" />
-      </section>
+      </section> */}
 
       {/* Footer */}
       <section id="Contact" className="bg-[#1f1f1f] text-white px-24 py-24 rounded-t-[42px] max-w-[1400px] ">

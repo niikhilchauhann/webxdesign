@@ -1,5 +1,4 @@
 import "./App.css";
-import TubesCursor from "./components/TubesCursor.jsx";
 import "./css/resetcss.css";
 import "./css/style.css";
 import "./css/wrapper-main.css";
