@@ -685,7 +685,7 @@ export default function Home() {
 
         {/* FOOTER BOTTOM */}
         <div className="flex flex-col md:flex-row justify-between text-white text-sm gap-4 ">
-            <p className="text-white text-2xl ">Copyright© 2023 Jayesh. All Rights Reserved.</p>
+            <p className="text-white text-2xl ">Copyright© 2027 Nikhil. All Rights Reserved.</p>
             <p className="text-white text-2xl">User Terms & Conditions | Privacy Policy</p>
         </div>
 
