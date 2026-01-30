@@ -1,13 +1,15 @@
-import { useState } from 'react'
-import './App.css'
-import './pages/Home.jsx'
+import "./App.css";
+import "./css/resetcss.css";
+import "./css/style.css";
+import "./css/wrapper-main.css";
+import Home from "./pages/Home.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <Home />
-  )
+    <main className="wrapper-main">
+      <Home />
+    </main>
+  );
 }
 
-export default App
+export default App;

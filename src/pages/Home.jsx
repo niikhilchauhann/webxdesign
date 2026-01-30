@@ -1,5 +1,18 @@
 import { useEffect } from "react";
 
+import headerIntroSvg from "../assets/svgs/header-intro.svg";
+import headerIntroLargeSvg from "../assets/svgs/header-intro-large.svg";
+import quoteUpSvg from "../assets/svgs/quote-up.svg";
+import heroOnhoverSvg from "../assets/svgs/hero-onhover.svg";
+import heroImage from "../assets/images/model.png";
+import linkSvg from "../assets/svgs/link.svg";
+import starSvg from "../assets/svgs/star.svg";
+import projectAccentLeft from "../assets/images/project-card-animation-item-left.png";
+import projectAccentTop from "../assets/images/project-card-animation-item-top.png";
+import projectAccentRight from "../assets/images/project-card-animation-item-right.png";
+import hireMeImage from "../assets/images/hire-me-image.png";
+import ninjaStarSvg from "../assets/svgs/ninja-star.svg";
+
 import "../css/home/header-section.css";
 import "../css/home/hero-section.css";
 import "../css/home/marquee-section.css";
@@ -16,68 +29,568 @@ export default function Home() {
     import("../scripts/crazy-animations/image-panel.js");
   }, []);
 
+  const handleSeeAll = () => {
+    window.location.href = "projects-page.html";
+  };
+
   return (
     <>
-      {/* HEADER */}
-      <header className="header">
-        <div className="header-container">
-          <img src="/assets/svgs/header-intro.svg" alt="" />
-        </div>
-      </header>
+     <header class="header-main">
+      <div class="header-main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="#About" class="active">About</a>
+        <a href="#Projects" class="active">Projects</a>
+        <div class="header-main-logo"><h2>PORTFOLIO</h2></div>
+        <a href="https://drive.google.com/file/d/1Wdxpp6Y5bJS1unP0ZFmhXiz4RpoaowW0/view?usp=sharing" target="_blank" class="active">Resume</a>
+        <a href="https://github.com/niikhilchauhann?tab=repositories" class="active">GitHub</a>
+        <a href="#Contact" class="active">Contact</a>
+      </div>
+    </header>
 
-      {/* HERO */}
-      <section className="hero-section">
-        <div className="hero-left">
-          <h1>
-            I'm <span>Nikhil</span>
-          </h1>
-          <p>Software Engineer</p>
-        </div>
+      <section className="hero-section fade-in">
+        <div className="hero">
+          <div className="hero-greeting">
+            <div className="hero-hello-text">
+              <p>Hello!</p>
+              <img src={headerIntroSvg} alt="Greeting" />
+            </div>
+            <div className="hero-intro-text">
+              <p>
+                I'm <span data-value="Nikhil">Nikhil</span>,
+                <br />
+                Software Engineer
+              </p>
+              <img src={headerIntroLargeSvg} alt="Introduction" />
+            </div>
+          </div>
 
-        <div className="hero-right">
-          <img src="/assets/images/model.png" alt="model" />
+          <div className="hero-bottom-section">
+            <div className="semi-circle-left-content">
+              <img src={quoteUpSvg} alt="Quote" />
+              <p>
+                Nikhil’s exceptional coding skills outperforms client’s overall expectations. Highly Recommended.
+              </p>
+            </div>
+
+            <div className="semi-circle">
+              <img src={heroOnhoverSvg} className="hero-onhover" alt="Hero overlay" />
+              <img id="hero-image" src={heroImage} alt="Nikhil portrait" />
+
+              <div className="hero-bottom-buttons">
+                <div className="resume-button">
+                  <a
+                    href="https://drive.google.com/file/d/1Wdxpp6Y5bJS1unP0ZFmhXiz4RpoaowW0/view?usp=sharing"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Resume
+                  </a>
+                  <img src={linkSvg} alt="Resume link" />
+                </div>
+                <div className="hire-button">
+                  <a href="https://linkedin.com/in/niikhilchauhann" target="_blank" rel="noreferrer">
+                    Hire me
+                  </a>
+                  <img src={linkSvg} alt="Hire link" />
+                </div>
+              </div>
+            </div>
+
+            <div className="semi-circle-right-content">
+              <div className="stars flex">
+                <img src={starSvg} alt="Star" />
+                <img src={starSvg} alt="Star" />
+                <img src={starSvg} alt="Star" />
+                <img src={starSvg} alt="Star" />
+                <img src={starSvg} alt="Star" />
+              </div>
+              <p>
+                3 Years
+                <br />
+                <span>Experience</span>
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* MARQUEE */}
-      <section className="marquee-section">
-        <div className="marquee">
-          <span>Flutter • React • Firebase • Startups •</span>
+      <section className="project-section" id="Projects">
+        <div className="projects-background">
+          <img src={projectAccentLeft} alt="Project accent left" />
+          <img src={projectAccentTop} alt="Project accent top" />
+          <img src={projectAccentRight} alt="Project accent right" />
+        </div>
+        <div className="projects-foreground">
+          <div className="project-headline">
+            <p>
+              Crafted for <span>Clients</span>
+            </p>
+            <p>A glimpse into projects I’ve designed and led — focused on intuitive user experiences and scalable platforms.</p>
+          </div>
+
+          <div className="projects-card-row">
+            <a href="https://github.com/niikhilchauhann/kevaa.in/" target="_blank" rel="noreferrer">
+              <div className="project-card">
+                <p>Kevaa | E-commerce</p>
+                <div className="divider" />
+                <div className="card-stack">
+                  <div className="card" />
+                  <div className="card" />
+                  <div className="card" />
+                </div>
+                <div className="project-card-btn" />
+              </div>
+            </a>
+            <a href="https://github.com/niikhilchauhann/yuvaprabha/releases" target="_blank" rel="noreferrer">
+              <div className="project-card">
+                <p>Yuvaprabha | AI</p>
+                <div className="divider" />
+                <div className="card-stack">
+                  <div className="card" />
+                  <div className="card" />
+                  <div className="card" />
+                </div>
+                <div className="project-card-btn" />
+              </div>
+            </a>
+            <a href="https://github.com/niikhilchauhann/EnvyMusic" target="_blank" rel="noreferrer">
+              <div className="project-card">
+                <p>Envy Music | Streaming</p>
+                <div className="divider" />
+                <div className="card-stack">
+                  <div className="card" />
+                  <div className="card" />
+                  <div className="card" />
+                </div>
+                <div className="project-card-btn" />
+              </div>
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* WORK EXPERIENCE */}
+      <div id="Service" />
+
       <section className="work-exp-section">
-        <h2>Work Experience</h2>
-        {/* SAME markup copied from index.html */}
+        <p className="heading">
+          My <span>Work Experience</span>
+        </p>
+
+        <div className="work-history-timeline">
+          <div className="timeline-left-content">
+            <p className="subheading">Couponbaazi, Remote</p>
+            <p className="description">Founding Engineer (April 2025 - Nov 2025)</p>
+
+            <p className="subheading">Infoware, Remote</p>
+            <p className="description">Flutter Developer (Jan 2025 - April 2025)</p>
+
+            <p className="subheading">DriWix, Remote</p>
+            <p className="description">Software Engineering Manager (Sep 2024 - Dec 2024)</p>
+          </div>
+          <div className="timeline-center-content">
+            <div className="timeline-circle" />
+            <div className="timeline-circle" />
+            <div className="timeline-circle" />
+            <div className="timeline-connector" />
+          </div>
+          <div className="timeline-right-content">
+            <p className="subheading">Software Engineer Intern</p>
+            <p className="description">
+              Transformed ideas into production-ready web and mobile apps across diverse tech stacks — enhanced performance by over 40%.
+            </p>
+
+            <p className="subheading">Software Developer Intern</p>
+            <p className="description">
+              Designed and shipped 5+ cross-platform applications with optimized UI/UX, delivering seamless experiences across devices.
+            </p>
+
+            <p className="subheading">Software Engineer Intern</p>
+            <p className="description">
+              Led an agile dev team from planning to deployment — ensured timely delivery, zero critical bugs, and scalable architecture.
+            </p>
+          </div>
+        </div>
       </section>
 
-      {/* PROJECTS */}
-      <section className="project-section">
-        <h2>Projects</h2>
-        {/* SAME markup */}
+      <section className="hire-me-section" id="About">
+        <div className="left-section-img">
+          <img src={hireMeImage} alt="Hire me" />
+        </div>
+        <div className="right-section-content">
+          <p className="heading">
+            Why <span>Hire me</span>?
+          </p>
+          <p className="description">
+            I create clean, intuitive designs that align with user needs. Every product I build is simple, thoughtful, and goal-focused.
+          </p>
+          <div className="why-me-list">
+            <div className="title-value-text">
+              <p className="subheading">25,000+</p>
+              <p className="description">Lines of code</p>
+            </div>
+            <div className="title-value-text">
+              <p className="subheading">25+</p>
+              <p className="description">Projects Completed</p>
+            </div>
+          </div>
+          <a href="https://linkedin.com/in/niikhilchauhann" target="_blank" rel="noreferrer">
+            <div className="hire-me-button">
+              <p>Hire me</p>
+            </div>
+          </a>
+        </div>
       </section>
 
-      {/* PORTFOLIO */}
-      <section className="portfolio-section">
-        <h2>Portfolio</h2>
-        {/* SAME markup */}
+      <section className="portfolio-section" id="Project">
+        <div className="portfolio-headline">
+          <p className="heading">
+            Let's have a look at my <span>Portfolio</span>
+          </p>
+          <button type="button" className="button" onClick={handleSeeAll}>
+            See All
+          </button>
+        </div>
+
+        <div className="portfolio-card-row">
+          <a href="https://quickiz.onrender.com/" target="_blank" rel="noreferrer">
+            <div className="portfolio-card">
+              <p>DSA Visualizer</p>
+              <div className="divider" />
+              <div className="portfolio-card-stack">
+                <div className="card" />
+                <div className="card" />
+                <div className="card" />
+              </div>
+              <div className="portfolio-card-btn" />
+            </div>
+          </a>
+          <a href="https://www.kevaa.in" target="_blank" rel="noreferrer">
+            <div className="portfolio-card">
+              <p>E-commerce App</p>
+              <div className="divider" />
+              <div className="portfolio-card-stack">
+                <div className="card" />
+                <div className="card" />
+                <div className="card" />
+              </div>
+              <div className="portfolio-card-btn" />
+            </div>
+          </a>
+          <a href="https://www.pixiepedia.site" target="_blank" rel="noreferrer">
+            <div className="portfolio-card">
+              <p>Anime Streaming App</p>
+              <div className="divider" />
+              <div className="portfolio-card-stack">
+                <div className="card" />
+                <div className="card" />
+                <div className="card" />
+              </div>
+              <div className="portfolio-card-btn" />
+            </div>
+          </a>
+        </div>
+
+        <div className="skills-section">
+          <p className="skill-heading">Languages:</p>
+          <p>Java</p>
+          <p>JavaScript</p>
+          <p>TypeScript</p>
+          <p>Dart</p>
+          <p>Python</p>
+
+          <p className="skill-heading">Frontend:</p>
+          <p>HTML</p>
+          <p>CSS</p>
+          <p>React</p>
+          <p>Next.js</p>
+          <p>Flutter</p>
+          <p>Angular</p>
+
+          <p className="skill-heading">Backend & APIs:</p>
+          <p>SQL</p>
+          <p>JSON</p>
+          <p>Node.js</p>
+          <p>Postman</p>
+          <p>FastAPI</p>
+
+          <p className="skill-heading">ML & Data Tools:</p>
+          <p>TensorFlow</p>
+          <p>Kaggle</p>
+
+          <p className="skill-heading">Cloud & DevOps:</p>
+          <p>Google Cloud Console</p>
+          <p>AWS</p>
+          <p>Git/GitHub</p>
+
+          <p className="skill-heading">Developer Tools:</p>
+          <p>VS Code</p>
+          <p>DevTools</p>
+
+          <p className="skill-heading">Design & Docs:</p>
+          <p>Figma</p>
+          <p>Material UI</p>
+          <p>LaTeX</p>
+        </div>
       </section>
 
-      {/* CERTIFICATIONS */}
+      <div className="custom-marquee">
+        <div className="marquee-tilted-container">
+          <div className="marquee-track">
+            <div className="item">
+              <img src={ninjaStarSvg} alt="Dashboard" />
+              <span>Dashboard</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="Wireframe" />
+              <span>Wireframe</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="User Research" />
+              <span>User Research</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="UX Design" />
+              <span>UX Design</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="App Design" />
+              <span>App Design</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="Dashboard" />
+              <span>Dashboard</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="Wireframe" />
+              <span>Wireframe</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="User Research" />
+              <span>User Research</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="UX Design" />
+              <span>UX Design</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="App Design" />
+              <span>App Design</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="Dashboard" />
+              <span>Dashboard</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="Wireframe" />
+              <span>Wireframe</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="User Research" />
+              <span>User Research</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="UX Design" />
+              <span>UX Design</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="App Design" />
+              <span>App Design</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="Dashboard" />
+              <span>Dashboard</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="Wireframe" />
+              <span>Wireframe</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="User Research" />
+              <span>User Research</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="UX Design" />
+              <span>UX Design</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="App Design" />
+              <span>App Design</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="Dashboard" />
+              <span>Dashboard</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="Wireframe" />
+              <span>Wireframe</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="User Research" />
+              <span>User Research</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="UX Design" />
+              <span>UX Design</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="App Design" />
+              <span>App Design</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="Dashboard" />
+              <span>Dashboard</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="Wireframe" />
+              <span>Wireframe</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="User Research" />
+              <span>User Research</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="UX Design" />
+              <span>UX Design</span>
+            </div>
+            <div className="item">
+              <img src={ninjaStarSvg} alt="App Design" />
+              <span>App Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <section className="certifications-section">
-        <h2>Certifications</h2>
-        {/* SAME markup */}
+        <div className="certifications-headline">
+          <p className="heading">
+            Certifications and <span>Achievements</span>
+          </p>
+          <div className="button">See All</div>
+        </div>
+
+        <div className="certifications-card-row">
+          <div className="certifications-card">
+            <div className="certifications-card-stack">
+              <div className="card" />
+              <div className="card" />
+              <div className="card" />
+            </div>
+            <div className="certifications-card-btn">
+              <p>Walmart Sparkathon</p>
+            </div>
+          </div>
+          <div className="certifications-card">
+            <div className="certifications-card-stack">
+              <div className="card" />
+              <div className="card" />
+              <div className="card" />
+            </div>
+            <div className="certifications-card-btn">
+              <p>CodePunk &lt;v1.0/&gt; 2k24: Runner-up</p>
+            </div>
+          </div>
+          <div className="certifications-card">
+            <div className="certifications-card-stack">
+              <div className="card" />
+              <div className="card" />
+              <div className="card" />
+            </div>
+            <div className="certifications-card-btn">
+              <p>SynapHack 2k25: Runner-up</p>
+            </div>
+          </div>
+          <div className="certifications-card">
+            <div className="certifications-card-stack">
+              <div className="card" />
+              <div className="card" />
+              <div className="card" />
+            </div>
+            <div className="certifications-card-btn">
+              <p>Internship: DriWix</p>
+            </div>
+          </div>
+          <div className="certifications-card">
+            <div className="certifications-card-stack">
+              <div className="card" />
+              <div className="card" />
+              <div className="card" />
+            </div>
+            <div className="certifications-card-btn">
+              <p>NPTEL: Elite Certificate</p>
+            </div>
+          </div>
+          <div className="certifications-card">
+            <div className="certifications-card-stack">
+              <div className="card" />
+              <div className="card" />
+              <div className="card" />
+            </div>
+            <div className="certifications-card-btn">
+              <p>Accenture: Artificial Intelligence</p>
+            </div>
+          </div>
+          <div className="certifications-card">
+            <div className="certifications-card-stack">
+              <div className="card" />
+              <div className="card" />
+              <div className="card" />
+            </div>
+            <div className="certifications-card-btn">
+              <p>thingQbator: HTML & CSS</p>
+            </div>
+          </div>
+          <div className="certifications-card">
+            <div className="certifications-card-stack">
+              <div className="card" />
+              <div className="card" />
+              <div className="card" />
+            </div>
+            <div className="certifications-card-btn">
+              <p>thingQbator: Flutter</p>
+            </div>
+          </div>
+          <div className="certifications-card">
+            <div className="certifications-card-stack">
+              <div className="card" />
+              <div className="card" />
+              <div className="card" />
+            </div>
+            <div className="certifications-card-btn">
+              <p>SimpliLearn: Intro to SQL</p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* HIRE ME */}
-      <section className="hire-me-section">
-        <img src="/assets/images/hire-me-image.png" alt="" />
-      </section>
+      <section className="contact-me-section" id="Contact">
+        <p className="heading">
+          Have an Awesome Project Idea? <span>Let's Discuss</span>
+        </p>
 
-      {/* CONTACT */}
-      <section className="contact-me-section">
-        <h2>Contact Me</h2>
+        <div className="email-container">
+          <form action="https://api.web3forms.com/submit" method="POST" className="email-wrapper">
+            <div className="round-icon" />
+
+            <input type="hidden" name="access_key" value="abc88dda-ed87-4012-9b3c-114ea01d25d4" />
+            <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+
+            <div className="text-field">
+              <input
+                type="email"
+                name="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$"
+                placeholder="Enter email address"
+                required
+              />
+            </div>
+
+            <button type="submit" className="send-button">
+              <p>Send</p>
+            </button>
+          </form>
+        </div>
+
+        <div className="mail-banner" />
       </section>
     </>
   );
