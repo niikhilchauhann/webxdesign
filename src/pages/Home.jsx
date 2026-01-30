@@ -593,6 +593,95 @@ export default function Home() {
 
         <div className="mail-banner" />
       </section>
+
+      {/* Footer */}
+      <section id="Contact" className="bg-[#1f1f1f] text-white px-24 py-24 rounded-t-[42px] max-w-[1400px] ">
+
+        {/* TOP ROW */}
+        <div className="flex items-center justify-between">
+            <h2 className="text-5xl font-semibold text-white">
+            Lets Connect there
+            </h2>
+
+            <button className="flex items-center gap-2 bg-[#ff8c3a] text-white px-6 py-3 rounded-full font-medium hover:opacity-90 transition text-xl">
+            Hire me
+            <span className="text-xl">↗</span>
+            </button>
+        </div>
+
+        {/* DIVIDER */}
+        <div className="border-t border-white my-10" />
+
+        {/* CONTENT GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+            {/* BRAND */}
+            <div className="space-y-4">
+            <div className="flex items-center gap-3">
+                <div className="bg-[#ff8c3a] text-white font-bold w-16 h-16 flex items-center justify-center rounded-full text-xl">
+                N <span className="text-black ">C</span>
+                </div>
+                <span className="text-2xl font-semibold">Nikhil Chauhan</span>
+            </div>
+
+            <p className="text-gray-300 text-sm leading-relaxed text-xl">
+                Full-Stack Web & Mobile Developer. Crafting seamless digital experiences with code and creativity.
+            </p>
+            </div>
+
+            {/* NAVIGATION */}
+            <div>
+            <h4 className="text-[#ff8c3a] font-semibold mb-4 text-2xl">Navigation</h4>
+            <ul className="space-y-3 text-gray-300 text-xl">
+                <a href="/"><li>Home</li></a>
+                <a href="#About"><li>About Us</li></a>
+                <a href=""><li>Resume</li></a>
+                <a href="#Projects"><li>Project</li></a>
+            </ul>
+            </div>
+
+            {/* CONTACT */}
+            <div>
+            <h4 className="text-[#ff8c3a] font-semibold mb-4 text-2xl">Contact</h4>
+            <ul className="space-y-3 text-gray-300 text-xl">
+                <li>+91 7738443636</li>
+                <li>Jaycrea36@gmail.com</li>
+                <li>Portfolio-jcrea.com</li>
+            </ul>
+            </div>
+
+            {/* SUBSCRIBE */}
+            <div>
+            <h4 className="text-[#ff8c3a] font-semibold mb-4 text-2xl">
+                Get the latest information
+            </h4>
+
+            <div className="flex overflow-hidden rounded-xl bg-white">
+                <input
+                type="email"
+                placeholder="Email Address"
+                className="flex-1 px-6 py-6 text-black outline-none"
+                />
+                <button className="bg-[#ff8c3a] px-5 flex items-center justify-center">
+                <span className="text-xl text-white">➤</span>
+                </button>
+            </div>
+            </div>
+
+        </div>
+
+        {/* BOTTOM DIVIDER */}
+        <div className="w-full max-w-[1220px] border-t border-white/40 mt-16"></div>
+
+
+        {/* FOOTER BOTTOM */}
+        <div className="flex flex-col md:flex-row justify-between text-white text-sm gap-4 ">
+            <p className="text-white text-2xl ">Copyright© 2023 Jayesh. All Rights Reserved.</p>
+            <p className="text-white text-2xl">User Terms & Conditions | Privacy Policy</p>
+        </div>
+
+        </section>
+
     </>
   );
 }
